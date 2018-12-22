@@ -1,0 +1,76 @@
+package com.hcl.eihDrive.dao;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
+
+import com.hcl.eihDrive.behaviour.EihTransById;
+import com.hcl.eihDrive.behaviour.EihTransToGetFromDB;
+import com.hcl.eihDrive.dto.EihApps;
+
+public class EihAppsDao extends EihDaoAbstract<EihApps> implements Dao<EihApps> {
+
+	public void insert(SessionFactory factory, EihApps input) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void update(SessionFactory factory, EihApps input) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public Boolean delete(SessionFactory factory, EihApps input) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public EihApps getFromDb(SessionFactory factory, String fromTable, int value) {
+
+		return null;
+	}
+
+	public EihApps getFromDB(SessionFactory factory, String fromTable, String name) {
+
+		return null;
+	}
+
+	public EihApps getFromDB(SessionFactory factory, String fromTable, Object value1, Object value2) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List<EihApps> getFromDb(SessionFactory factory, String fromTable) {
+
+		setTransBehaviourForList(new EihTransToGetFromDB<EihApps>());
+		List<EihApps> results = takeActionAndGetList(factory, fromTable);
+		
+		return results;
+	}
+
+	public EihApps getByQuery(SessionFactory factory, String query) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List<EihApps> getListByQuery(SessionFactory factory, String query) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public EihApps getFromDB(SessionFactory factory, String fromTable, Object value, String col) {
+
+		setTransBehaviourForObj(new EihTransById<EihApps>());
+		EihApps result = takeActionAndGetObj(factory, fromTable, value, col);
+
+		return result;
+	}
+
+	public EihApps getFromDB(SessionFactory factory, String fromTable, Object value) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
